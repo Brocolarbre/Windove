@@ -12,11 +12,13 @@
 #include "Windove/Event/MouseScrolledEvent.hpp"
 #include "Windove/Event/TextEnteredEvent.hpp"
 #include "Windove/Event/WindowClosedEvent.hpp"
+#include "Windove/Event/WindowContentScaledEvent.hpp"
 #include "Windove/Event/WindowFocusGainedEvent.hpp"
 #include "Windove/Event/WindowFocusLostEvent.hpp"
 #include "Windove/Event/WindowMaximizedEvent.hpp"
 #include "Windove/Event/WindowMinimizedEvent.hpp"
 #include "Windove/Event/WindowMovedEvent.hpp"
+#include "Windove/Event/WindowRefreshedEvent.hpp"
 #include "Windove/Event/WindowResizedEvent.hpp"
 #include "Windove/Event/WindowRestoredEvent.hpp"
 
@@ -107,6 +109,11 @@ namespace dove
 			getEventDispatcher(window).receiveEvent<WindowClosedEvent>();
 		}
 
+		void window_content_scale_callback(GLFWwindow* window, float xscale, float yscale)
+		{
+			getEventDispatcher(window).receiveEvent<WindowContentScaledEvent>(xscale, yscale);
+		}
+
 		void window_focus_callback(GLFWwindow* window, int focused)
 		{
 			if(focused)
@@ -134,6 +141,11 @@ namespace dove
 		void window_pos_callback(GLFWwindow* window, int xpos, int ypos)
 		{
 			getEventDispatcher(window).receiveEvent<WindowMovedEvent>(static_cast<unsigned int>(xpos), static_cast<unsigned int>(ypos));
+		}
+
+		void window_refresh_callback(GLFWwindow* window)
+		{
+			getEventDispatcher(window).receiveEvent<WindowRefreshedEvent>();
 		}
 
 		void window_size_callback(GLFWwindow* window, int width, int height)
@@ -335,10 +347,12 @@ namespace dove
 		glfwSetMouseButtonCallback(m_window, mouse_button_callback);
 		glfwSetScrollCallback(m_window, scroll_callback);
 		glfwSetWindowCloseCallback(m_window, window_close_callback);
+		glfwSetWindowContentScaleCallback(m_window, window_content_scale_callback);
 		glfwSetWindowFocusCallback(m_window, window_focus_callback);
 		glfwSetWindowIconifyCallback(m_window, window_iconify_callback);
 		glfwSetWindowMaximizeCallback(m_window, window_maximize_callback);
 		glfwSetWindowPosCallback(m_window, window_pos_callback);
+		glfwSetWindowRefreshCallback(m_window, window_refresh_callback);
 		glfwSetWindowSizeCallback(m_window, window_size_callback);
 
 		captureContext();

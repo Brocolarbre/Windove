@@ -32,12 +32,14 @@ namespace dove
 		WINDOVE_API virtual void onMouseReleased(MouseEvent mouseEvent) {};
 		WINDOVE_API virtual void onMouseScrolled(int horizontalScroll, int verticalScroll) {};
 		WINDOVE_API virtual void onWindowClosed() {};
+		WINDOVE_API virtual void onWindowContentScaled(float x, float y) {};
 		WINDOVE_API virtual void onWindowFocusGained() {};
 		WINDOVE_API virtual void onWindowFocusLost() {};
 		WINDOVE_API virtual void onWindowMinimized() {};
 		WINDOVE_API virtual void onWindowMaximized() {};
 		WINDOVE_API virtual void onWindowRestored() {};
 		WINDOVE_API virtual void onWindowMoved(unsigned int x, unsigned int y) {};
+		WINDOVE_API virtual void onWindowRefreshed() {};
 		WINDOVE_API virtual void onWindowResized(unsigned int width, unsigned int height) {};
 	};
 }

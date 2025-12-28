@@ -242,6 +242,11 @@ namespace dove
 			m_initialized = false;
 		}
 	}
+	
+	void* Window::getProcAddress(const char* procname)
+	{
+		return glfwGetProcAddress(procname);
+	}
 
 	const std::list<EventHandler*>& Window::getEventHandlers() const
 	{
@@ -474,10 +479,5 @@ namespace dove
 	void* Window::getPlatformWindow() const
 	{
 		return m_window;
-	}
-
-	void* Window::getProcAddress(const char* procname) const
-	{
-		return glfwGetProcAddress(procname);
 	}
 }

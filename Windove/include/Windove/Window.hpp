@@ -61,6 +61,7 @@ namespace dove
 
 		WINDOVE_API static bool initialize();
 		WINDOVE_API static void terminate();
+		WINDOVE_API static void* getProcAddress(const char* procname);
 
 		WINDOVE_API const std::list<EventHandler*>& getEventHandlers() const;
 		WINDOVE_API void clearEventHandlers();
@@ -94,6 +95,5 @@ namespace dove
 		WINDOVE_API void captureContext() const;
 		WINDOVE_API void releaseContext() const;
 		WINDOVE_API void* getPlatformWindow() const;
-		WINDOVE_API void* getProcAddress(const char* procname) const;
 	};
 }

@@ -475,4 +475,9 @@ namespace dove
 	{
 		return m_window;
 	}
+
+	void* Window::getProcAddress(const char* procname) const
+	{
+		return glfwGetProcAddress(procname);
+	}
 }

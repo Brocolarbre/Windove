@@ -94,5 +94,6 @@ namespace dove
 		WINDOVE_API void captureContext() const;
 		WINDOVE_API void releaseContext() const;
 		WINDOVE_API void* getPlatformWindow() const;
+		WINDOVE_API void* getProcAddress(const char* procname) const;
 	};
 }

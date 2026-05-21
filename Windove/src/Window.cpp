@@ -340,6 +340,9 @@ namespace dove
 
 		if (!m_window)
 			return false;
+		
+		glfwGetWindowPos(m_window, &m_x, &m_y);
+		glfwGetWindowSize(m_window, &m_width, &m_height);
 
 		glfwSetWindowUserPointer(m_window, &m_eventDispatcher);
 

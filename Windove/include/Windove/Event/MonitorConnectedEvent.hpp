@@ -5,14 +5,14 @@
 
 namespace dove
 {
-	class MonitorConnectedEvent : public Event
+	class WINDOVE_API MonitorConnectedEvent : public Event
 	{
 	private:
 		Monitor m_monitor;
 
 	public:
-		WINDOVE_API MonitorConnectedEvent(const Monitor& monitor);
+		MonitorConnectedEvent(const Monitor& monitor);
 
-		WINDOVE_API void process(EventHandler& eventHandler) const override;
+		void process(EventHandler& eventHandler) const override;
 	};
 }

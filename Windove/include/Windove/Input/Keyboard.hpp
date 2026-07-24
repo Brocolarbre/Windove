@@ -6,7 +6,7 @@ namespace dove
 {
 	class Window;
 
-	class Keyboard
+	class WINDOVE_API Keyboard
 	{
 	public:
 		enum class Key
@@ -134,18 +134,18 @@ namespace dove
 			Menu
 		};
 
-		WINDOVE_API static Keyboard::Key getKey(int key);
-		WINDOVE_API static int getPlatformKey(Keyboard::Key key);
+		static Keyboard::Key getKey(int key);
+		static int getPlatformKey(Keyboard::Key key);
 
-		WINDOVE_API static bool isKeyPressed(Window& window, Keyboard::Key key);
-		WINDOVE_API static bool isKeyReleased(Window& window, Keyboard::Key key);
-		WINDOVE_API static bool isKeyRepeated(Window& window, Keyboard::Key key);
+		static bool isKeyPressed(Window& window, Keyboard::Key key);
+		static bool isKeyReleased(Window& window, Keyboard::Key key);
+		static bool isKeyRepeated(Window& window, Keyboard::Key key);
 
-		WINDOVE_API static int getKeyScancode(Keyboard::Key key);
-		WINDOVE_API static std::string getKeyName(Keyboard::Key key);
+		static int getKeyScancode(Keyboard::Key key);
+		static std::string getKeyName(Keyboard::Key key);
 
-		WINDOVE_API static std::string getClipboardContent();
-		WINDOVE_API static void setClipboardContent(const std::string& clipboardContent);
+		static std::string getClipboardContent();
+		static void setClipboardContent(const std::string& clipboardContent);
 	};
 
 	struct KeyEvent

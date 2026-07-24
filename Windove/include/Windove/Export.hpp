@@ -1,15 +1,13 @@
 #pragma once
 
-#ifdef _WIN32
-	#ifdef WINDOVE_STATIC
+#if defined(_WIN32)
+	#if defined(WINDOVE_STATIC)
 		#define WINDOVE_API
+	#elif defined(WINDOVE_BUILD)
+		#define WINDOVE_API __declspec(dllexport)
 	#else
-		#ifdef WINDOVE_EXPORT
-			#define WINDOVE_API __declspec(dllexport)
-		#else
-			#define WINDOVE_API __declspec(dllimport)
-		#endif
+		#define WINDOVE_API __declspec(dllimport)
 	#endif
-#elif __linux__
-	#define WINDOVE_API
+#else
+	#define WINDOVE_API __attribute__((visibility("default")))
 #endif

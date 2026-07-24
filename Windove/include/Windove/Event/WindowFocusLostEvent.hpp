@@ -4,11 +4,11 @@
 
 namespace dove
 {
-	class WindowFocusLostEvent : public Event
+	class WINDOVE_API WindowFocusLostEvent : public Event
 	{
 	public:
-		WINDOVE_API WindowFocusLostEvent();
+		WindowFocusLostEvent();
 
-		WINDOVE_API void process(EventHandler& eventHandler) const override;
+		void process(EventHandler& eventHandler) const override;
 	};
 }

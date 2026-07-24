@@ -4,15 +4,15 @@
 
 namespace dove
 {
-	class WindowMovedEvent : public Event
+	class WINDOVE_API WindowMovedEvent : public Event
 	{
 	private:
 		unsigned int m_x;
 		unsigned int m_y;
 
 	public:
-		WINDOVE_API WindowMovedEvent(unsigned int x, unsigned int y);
+		WindowMovedEvent(unsigned int x, unsigned int y);
 
-		WINDOVE_API void process(EventHandler& eventHandler) const override;
+		void process(EventHandler& eventHandler) const override;
 	};
 }

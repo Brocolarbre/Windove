@@ -4,13 +4,13 @@
 
 namespace dove
 {
-	class MonitorManager
+	class WINDOVE_API MonitorManager
 	{
 	private:
-		WINDOVE_API static EventDispatcher m_eventDispatcher;
+		static EventDispatcher m_eventDispatcher;
 
 	public:
-		WINDOVE_API static void enableEventDispatcher();
-		WINDOVE_API static EventDispatcher& getEventDispatcher();
+		static void enableEventDispatcher();
+		static EventDispatcher& getEventDispatcher();
 	};
 }

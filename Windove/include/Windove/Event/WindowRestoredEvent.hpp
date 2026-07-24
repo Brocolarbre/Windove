@@ -4,11 +4,11 @@
 
 namespace dove
 {
-	class WindowRestoredEvent : public Event
+	class WINDOVE_API WindowRestoredEvent : public Event
 	{
 	public:
-		WINDOVE_API WindowRestoredEvent();
+		WindowRestoredEvent();
 
-		WINDOVE_API void process(EventHandler& eventHandler) const override;
+		void process(EventHandler& eventHandler) const override;
 	};
 }

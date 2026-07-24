@@ -4,15 +4,15 @@
 
 namespace dove
 {
-	class WindowContentScaledEvent : public Event
+	class WINDOVE_API WindowContentScaledEvent : public Event
 	{
 	private:
 		float m_x;
 		float m_y;
 
 	public:
-		WINDOVE_API WindowContentScaledEvent(float x, float y);
+		WindowContentScaledEvent(float x, float y);
 
-		WINDOVE_API void process(EventHandler& eventHandler) const override;
+		void process(EventHandler& eventHandler) const override;
 	};
 }

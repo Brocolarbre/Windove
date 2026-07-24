@@ -7,7 +7,7 @@
 
 namespace dove
 {
-	class Controller
+	class WINDOVE_API Controller
 	{
 	public:
 		enum class Id
@@ -83,20 +83,20 @@ namespace dove
 			std::vector<float> joysticks;
 		};
 
-		WINDOVE_API static bool isConnected(Id controller);
-		WINDOVE_API static bool isGamepad(Id controller);
+		static bool isConnected(Id controller);
+		static bool isGamepad(Id controller);
 
-		WINDOVE_API static Id getController(int controller);
-		WINDOVE_API static int getPlatformController(Id controller);
+		static Id getController(int controller);
+		static int getPlatformController(Id controller);
 
-		WINDOVE_API static std::string getName(Id controller);
-		WINDOVE_API static std::string getGamepadName(Id controller);
+		static std::string getName(Id controller);
+		static std::string getGamepadName(Id controller);
 
-		WINDOVE_API static std::vector<float> getJoysticks(Id controller);
-		WINDOVE_API static std::vector<bool> getButtons(Id controller);
-		WINDOVE_API static std::vector<Hat> getHats(Id controller);
+		static std::vector<float> getJoysticks(Id controller);
+		static std::vector<bool> getButtons(Id controller);
+		static std::vector<Hat> getHats(Id controller);
 
-		WINDOVE_API static GamepadState getGamepadState(Id controller);
-		WINDOVE_API static void updateGamepadMappings(const std::string& mappings);
+		static GamepadState getGamepadState(Id controller);
+		static void updateGamepadMappings(const std::string& mappings);
 	};
 }

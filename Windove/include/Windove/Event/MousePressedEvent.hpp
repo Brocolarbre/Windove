@@ -5,14 +5,14 @@
 
 namespace dove
 {
-	class MousePressedEvent : public Event
+	class WINDOVE_API MousePressedEvent : public Event
 	{
 	private:
 		MouseEvent m_mouseEvent;
 
 	public:
-		WINDOVE_API MousePressedEvent(const MouseEvent& mouseEvent);
+		MousePressedEvent(const MouseEvent& mouseEvent);
 
-		WINDOVE_API void process(EventHandler& eventHandler) const override;
+		void process(EventHandler& eventHandler) const override;
 	};
 }

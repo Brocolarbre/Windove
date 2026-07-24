@@ -4,11 +4,11 @@
 
 namespace dove
 {
-	class WindowFocusGainedEvent : public Event
+	class WINDOVE_API WindowFocusGainedEvent : public Event
 	{
 	public:
-		WINDOVE_API WindowFocusGainedEvent();
+		WindowFocusGainedEvent();
 
-		WINDOVE_API void process(EventHandler& eventHandler) const override;
+		void process(EventHandler& eventHandler) const override;
 	};
 }

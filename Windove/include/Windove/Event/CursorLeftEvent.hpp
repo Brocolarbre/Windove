@@ -4,11 +4,11 @@
 
 namespace dove
 {
-	class CursorLeftEvent : public Event
+	class WINDOVE_API CursorLeftEvent : public Event
 	{
 	public:
-		WINDOVE_API CursorLeftEvent();
+		CursorLeftEvent();
 
-		WINDOVE_API void process(EventHandler& eventHandler) const override;
+		void process(EventHandler& eventHandler) const override;
 	};
 }

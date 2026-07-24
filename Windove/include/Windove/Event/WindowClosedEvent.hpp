@@ -4,11 +4,11 @@
 
 namespace dove
 {
-	class WindowClosedEvent : public Event
+	class WINDOVE_API WindowClosedEvent : public Event
 	{
 	public:
-		WINDOVE_API WindowClosedEvent();
+		WindowClosedEvent();
 
-		WINDOVE_API void process(EventHandler& eventHandler) const override;
+		void process(EventHandler& eventHandler) const override;
 	};
 }

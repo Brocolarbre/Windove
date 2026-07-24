@@ -14,6 +14,11 @@ project "WindoveTest"
 		"Windove"
 	}
 	
+	filter "options:shared-library"
+		disablewarnings {
+			"4251"
+		}
+	
 	filter "not options:shared-library"
 		links {
 			"glfw3"

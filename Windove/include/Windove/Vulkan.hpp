@@ -10,11 +10,11 @@ struct VkAllocationCallbacks;
 
 namespace dove
 {
-	class Vulkan
+	class WINDOVE_API Vulkan
 	{
 	public:
-		WINDOVE_API static bool isSupported();
-		WINDOVE_API static std::vector<const char*> getRequiredInstanceExtensions();
-		WINDOVE_API static VkResult createWindowSurface(VkInstance instance, const Window& window, const VkAllocationCallbacks* allocator, VkSurfaceKHR* surface);
+		static bool isSupported();
+		static std::vector<const char*> getRequiredInstanceExtensions();
+		static VkResult createWindowSurface(VkInstance instance, const Window& window, const VkAllocationCallbacks* allocator, VkSurfaceKHR* surface);
 	};
 }

@@ -4,11 +4,11 @@
 
 namespace dove
 {
-	class WindowMinimizedEvent : public Event
+	class WINDOVE_API WindowMinimizedEvent : public Event
 	{
 	public:
-		WINDOVE_API WindowMinimizedEvent();
+		WindowMinimizedEvent();
 
-		WINDOVE_API void process(EventHandler& eventHandler) const override;
+		void process(EventHandler& eventHandler) const override;
 	};
 }

@@ -19,9 +19,13 @@ project "Windove"
 		}
 		
 		defines	{
-			"WINDOVE_EXPORT"
+			"WINDOVE_BUILD"
 		}
 		
+		disablewarnings {
+			"4251"
+		}
+	
 	filter "not options:shared-library"
 		kind "StaticLib"
 		

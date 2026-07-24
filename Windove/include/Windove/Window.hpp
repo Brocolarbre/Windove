@@ -34,7 +34,7 @@ namespace dove
 		bool openGLForwardCompatibility = false;
 	};
 
-	class Window
+	class WINDOVE_API Window
 	{
 	private:
 		GLFWwindow* m_window;
@@ -50,50 +50,50 @@ namespace dove
 		static bool m_initialized;
 
 	public:
-		WINDOVE_API Window();
-		WINDOVE_API Window(const std::string& title, unsigned int width, unsigned int height, const WindowSettings& windowSettings = WindowSettings());
-		WINDOVE_API Window(const Window& window) = delete;
-		WINDOVE_API Window(Window&& window) noexcept;
-		WINDOVE_API ~Window();
+		Window();
+		Window(const std::string& title, unsigned int width, unsigned int height, const WindowSettings& windowSettings = WindowSettings());
+		Window(const Window& window) = delete;
+		Window(Window&& window) noexcept;
+		~Window();
 
-		WINDOVE_API Window& operator=(const Window& window) = delete;
-		WINDOVE_API Window& operator=(Window&& window) noexcept;
+		Window& operator=(const Window& window) = delete;
+		Window& operator=(Window&& window) noexcept;
 
-		WINDOVE_API static bool initialize();
-		WINDOVE_API static void terminate();
-		WINDOVE_API static void* getProcAddress(const char* procname);
+		static bool initialize();
+		static void terminate();
+		static void* getProcAddress(const char* procname);
 
-		WINDOVE_API const std::list<EventHandler*>& getEventHandlers() const;
-		WINDOVE_API void clearEventHandlers();
-		WINDOVE_API void addEventHandler(EventHandler& eventHandler);
-		WINDOVE_API void removeEventHandler(EventHandler& eventHandler);
+		const std::list<EventHandler*>& getEventHandlers() const;
+		void clearEventHandlers();
+		void addEventHandler(EventHandler& eventHandler);
+		void removeEventHandler(EventHandler& eventHandler);
 
-		WINDOVE_API bool isOpen() const;
-		WINDOVE_API bool isFullscreen() const;
-		WINDOVE_API std::string getTitle() const;
-		WINDOVE_API Vector2 getPosition() const;
-		WINDOVE_API Vector2 getSize() const;
-		WINDOVE_API Vector2 getFramebufferSize() const;
+		bool isOpen() const;
+		bool isFullscreen() const;
+		std::string getTitle() const;
+		Vector2 getPosition() const;
+		Vector2 getSize() const;
+		Vector2 getFramebufferSize() const;
 
-		WINDOVE_API bool open(const std::string& title, unsigned int width, unsigned int height, const WindowSettings& windowSettings = WindowSettings());
-		WINDOVE_API void close();
-		WINDOVE_API void minimize();
-		WINDOVE_API void maximize();
-		WINDOVE_API void restore();
-		WINDOVE_API void setTitle(const std::string& title);
-		WINDOVE_API void setPosition(unsigned int x, unsigned int y);
-		WINDOVE_API void setSize(unsigned int width, unsigned int height);
-		WINDOVE_API void setSizeLimits(unsigned int minWidth, unsigned int maxWidth, unsigned int minHeight, unsigned int maxHeight);
-		WINDOVE_API void setFullscreen(bool fullscreen);
-		WINDOVE_API void setIcon(unsigned int width, unsigned int height, unsigned char* data);
-		WINDOVE_API void requestAttention();
-		WINDOVE_API void fetchEvents();
-		WINDOVE_API void fetchEventsWait();
-		WINDOVE_API void fetchEventsWaitTimeout(double timeout);
-		WINDOVE_API void emitEmptyEvent();
-		WINDOVE_API void display() const;
-		WINDOVE_API void captureContext() const;
-		WINDOVE_API void releaseContext() const;
-		WINDOVE_API void* getPlatformWindow() const;
+		bool open(const std::string& title, unsigned int width, unsigned int height, const WindowSettings& windowSettings = WindowSettings());
+		void close();
+		void minimize();
+		void maximize();
+		void restore();
+		void setTitle(const std::string& title);
+		void setPosition(unsigned int x, unsigned int y);
+		void setSize(unsigned int width, unsigned int height);
+		void setSizeLimits(unsigned int minWidth, unsigned int maxWidth, unsigned int minHeight, unsigned int maxHeight);
+		void setFullscreen(bool fullscreen);
+		void setIcon(unsigned int width, unsigned int height, unsigned char* data);
+		void requestAttention();
+		void fetchEvents();
+		void fetchEventsWait();
+		void fetchEventsWaitTimeout(double timeout);
+		void emitEmptyEvent();
+		void display() const;
+		void captureContext() const;
+		void releaseContext() const;
+		void* getPlatformWindow() const;
 	};
 }

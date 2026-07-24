@@ -4,14 +4,14 @@
 
 namespace dove
 {
-	class TextEnteredEvent : public Event
+	class WINDOVE_API TextEnteredEvent : public Event
 	{
 	private:
 		unsigned int m_keyCode;
 
 	public:
-		WINDOVE_API TextEnteredEvent(unsigned int keyCode);
+		TextEnteredEvent(unsigned int keyCode);
 
-		WINDOVE_API void process(EventHandler& eventHandler) const override;
+		void process(EventHandler& eventHandler) const override;
 	};
 }

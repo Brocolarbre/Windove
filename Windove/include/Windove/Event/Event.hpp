@@ -4,10 +4,10 @@
 
 namespace dove
 {
-	class Event
+	class WINDOVE_API Event
 	{
 	public:
-		WINDOVE_API virtual ~Event() = default;
+		virtual ~Event() = default;
 
 		virtual void process(EventHandler& eventHandler) const = 0;
 	};

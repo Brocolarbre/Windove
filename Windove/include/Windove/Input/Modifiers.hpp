@@ -6,7 +6,7 @@
 
 namespace dove
 {
-	class Modifiers
+	class WINDOVE_API Modifiers
 	{
 	public:
 		enum InputModifier
@@ -21,6 +21,6 @@ namespace dove
 
 		using InputModifiers = std::bitset<6>;
 
-		WINDOVE_API static InputModifiers getInputModifiers(int inputModifiers);
+		static InputModifiers getInputModifiers(int inputModifiers);
 	};
 }

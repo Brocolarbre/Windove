@@ -26,7 +26,7 @@ namespace dove
 		int height;
 	};
 
-	class Monitor
+	class WINDOVE_API Monitor
 	{
 	private:
 		GLFWmonitor* m_monitor;
@@ -49,25 +49,25 @@ namespace dove
 			std::vector<unsigned short> blue;
 		};
 
-		WINDOVE_API Monitor(GLFWmonitor* monitor);
+		Monitor(GLFWmonitor* monitor);
 
-		WINDOVE_API static Monitor getPrimaryMonitor();
-		WINDOVE_API static std::vector<Monitor> getMonitors();
+		static Monitor getPrimaryMonitor();
+		static std::vector<Monitor> getMonitors();
 
-		WINDOVE_API static std::string getName(Monitor monitor);
+		static std::string getName(Monitor monitor);
 
-		WINDOVE_API static std::vector<VideoMode> getSupportedVideoModes(Monitor monitor);
-		WINDOVE_API static VideoMode getActiveVideoMode(Monitor monitor);
+		static std::vector<VideoMode> getSupportedVideoModes(Monitor monitor);
+		static VideoMode getActiveVideoMode(Monitor monitor);
 
-		WINDOVE_API static Vector2 getPhysicalSize(Monitor monitor);
-		WINDOVE_API static Vector2 getVirtualPosition(Monitor monitor);
-		WINDOVE_API static Vector2f getContentScale(Monitor monitor);
-		WINDOVE_API static Rectangle getWorkArea(Monitor monitor);
+		static Vector2 getPhysicalSize(Monitor monitor);
+		static Vector2 getVirtualPosition(Monitor monitor);
+		static Vector2f getContentScale(Monitor monitor);
+		static Rectangle getWorkArea(Monitor monitor);
 
-		WINDOVE_API static void setGamma(Monitor monitor, float gamma);
-		WINDOVE_API static GammaRamp getGammaRamp(Monitor monitor);
-		WINDOVE_API static void setGammaRamp(Monitor monitor, GammaRamp& gammaRamp);
+		static void setGamma(Monitor monitor, float gamma);
+		static GammaRamp getGammaRamp(Monitor monitor);
+		static void setGammaRamp(Monitor monitor, GammaRamp& gammaRamp);
 
-		WINDOVE_API void* getPlatformMonitor() const;
+		void* getPlatformMonitor() const;
 	};
 }

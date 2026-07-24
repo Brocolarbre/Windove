@@ -9,25 +9,25 @@
 
 namespace dove
 {
-	class EventDispatcher
+	class WINDOVE_API EventDispatcher
 	{
 	private:
 		std::queue<std::shared_ptr<Event>> m_events;
 		std::list<EventHandler*> m_eventHandlers;
 
-		WINDOVE_API void processEvent(const Event& event) const;
+		void processEvent(const Event& event) const;
 
 	public:
-		WINDOVE_API EventDispatcher();
+		EventDispatcher();
 
-		WINDOVE_API const std::list<EventHandler*>& getEventHandlers() const;
-		WINDOVE_API void clearEventHandlers();
-		WINDOVE_API void addEventHandler(EventHandler& eventHandler);
-		WINDOVE_API void removeEventHandler(EventHandler& eventHandler);
+		const std::list<EventHandler*>& getEventHandlers() const;
+		void clearEventHandlers();
+		void addEventHandler(EventHandler& eventHandler);
+		void removeEventHandler(EventHandler& eventHandler);
 
 		template<typename T, typename ...Args>
 		void receiveEvent(Args&&... args);
-		WINDOVE_API void processEvents();
+		void processEvents();
 	};
 
 	template<typename T, typename ...Args>

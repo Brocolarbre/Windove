@@ -5,14 +5,14 @@
 
 namespace dove
 {
-	class ControllerConnectedEvent : public Event
+	class WINDOVE_API ControllerConnectedEvent : public Event
 	{
 	private:
 		Controller::Id m_controllerId;
 
 	public:
-		WINDOVE_API ControllerConnectedEvent(Controller::Id controllerId);
+		ControllerConnectedEvent(Controller::Id controllerId);
 
-		WINDOVE_API void process(EventHandler& eventHandler) const override;
+		void process(EventHandler& eventHandler) const override;
 	};
 }

@@ -4,14 +4,14 @@
 
 namespace dove
 {
-	class DragAndDropEvent : public Event
+	class WINDOVE_API DragAndDropEvent : public Event
 	{
 	private:
 		std::vector<std::string> m_paths;
 
 	public:
-		WINDOVE_API DragAndDropEvent(const std::vector<std::string>& paths);
+		DragAndDropEvent(const std::vector<std::string>& paths);
 
-		WINDOVE_API void process(EventHandler& eventHandler) const override;
+		void process(EventHandler& eventHandler) const override;
 	};
 }

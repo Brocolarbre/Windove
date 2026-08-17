@@ -86,7 +86,7 @@ Any virtual method of the `EventHandler` class can be overriden to define behavi
 
 ## Test application
 
-**WindoveTest** is a test application that you can use to try the library with ease. It implements a few **use cases**.
+**WindoveTest** is a test application that can be used to try the library with ease. It implements a few **use cases**.
 
 ## Setup
 

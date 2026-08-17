@@ -108,5 +108,7 @@ The dependencies are listed below, the library is guaranteed to work with the sp
 
 ### External dependencies
 
+The minimum required C++ version is **C++11**.
+
 **Windove** has the following external dependencies :
 - GLFW (3.4)

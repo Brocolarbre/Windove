@@ -135,13 +135,9 @@ namespace dove
 		GLFWgammaramp gammaRampData{};
 
 		gammaRampData.size = static_cast<unsigned int>(gammaRamp.red.size());
-
-		for (unsigned int i = 0; i < gammaRampData.size; ++i)
-		{
-			gammaRampData.red = gammaRamp.red.data();
-			gammaRampData.green = gammaRamp.green.data();
-			gammaRampData.blue = gammaRamp.blue.data();
-		}
+		gammaRampData.red = gammaRamp.red.data();
+		gammaRampData.green = gammaRamp.green.data();
+		gammaRampData.blue = gammaRamp.blue.data();
 
 		glfwSetGammaRamp(static_cast<GLFWmonitor*>(monitor.getPlatformMonitor()), &gammaRampData);
 	}

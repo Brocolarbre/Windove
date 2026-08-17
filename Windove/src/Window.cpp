@@ -209,7 +209,7 @@ namespace dove
 		m_x = window.m_x;
 		m_y = window.m_y;
 		m_width = window.m_width;
-		m_height = m_height = window.m_height;
+		m_height = window.m_height;
 		m_fullscreen = window.m_fullscreen;
 
 		window.m_window = nullptr;

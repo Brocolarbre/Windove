@@ -95,7 +95,7 @@ To build the project :
 - Open a terminal in the **root folder** of the project
 - Run the following commands :
   - Windows : `.\scripts\windows\set_environment.bat` and `.\scripts\windows\set_workspace.bat`
-  - Linux : `.\scripts\linux\set_environment.bat` and `./scripts/linux/set_workspace.sh`
+  - Linux : `./scripts/linux/set_environment.sh` and `./scripts/linux/set_workspace.sh`
 - Open the project workspace
 - Build the project
 
